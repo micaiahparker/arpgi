@@ -16,6 +16,5 @@ class Game(db.Entity):
         with db_session:
             super().__init__(*args, **kwargs)
             self.last_modified = datetime.now()
-
-db.bind()
+            
 db.generate_mapping(create_tables=True)
